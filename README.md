@@ -1,209 +1,90 @@
-NELO Task Manager – React.js Assessment
+# NELO Task Manager – React.js Assessment
+
+A modern Task Manager application developed as part of the NELO React.js/Node.js Assessment. This project demonstrates React fundamentals, state management with hooks, reusable components, Tailwind CSS UI, session handling, debounced search, and simulated background automation.
+
+## 📋 Project Overview
+
+This application provides comprehensive task management functionality:
+
+- **User Authentication** - Simple login with email and password
+- **Task Dashboard** - Centralized view of all tasks with filtering and search
+- **CRUD Operations** - Full Create, Read, Update, Delete functionality for tasks
+- **Advanced Search** - Debounced search with Elastic-style matching
+- **Smart Filtering** - Filter by status and priority levels
+- **Session Management** - Persistent login using sessionStorage
+- **Automated Notifications** - Simulated cron job for overdue task alerts
+- **Modern UI** - Tailwind CSS with glass morphism design
+
+## ✨ Features Implemented
+
+### ✅ CRUD Operations
+- **Create Tasks** with:
+  - Title (required)
+  - Description (required)
+  - Priority (Low, Medium, High)
+  - Due Date (required)
+- **Read/Display Tasks** with:
+  - Title and description
+  - Priority badge with color coding
+  - Due date with overdue indicators
+  - Status (Completed/Pending)
+- **Update Tasks** via modal interface
+- **Delete Tasks** with confirmation dialog
+- **Toggle Completion** status between complete and pending
+
+### 🔍 Filtering & Search
+- **Task Filters**:
+  - All tasks
+  - Completed tasks only
+  - Pending tasks only
+  - High/Medium/Low priority
+- **Search Functionality**:
+  - Debounced input (300ms delay)
+  - Case-insensitive matching
+  - Partial substring matching across title, description, and priority
+  - Real-time results rendering
+
+### 🔐 Login & Session Handling
+- Simple login form with email and password
+- Session persistence using sessionStorage
+- Automatic redirect to dashboard after successful login
+- Logout functionality that clears session
+- Session persists until browser tab closure
+
+### ⚡ Debouncing Implementation
+- Custom `useDebounce` hook
+- 300ms delay to prevent excessive re-renders
+- Optimized search performance
+- Smooth user typing experience
+
+### 🔎 Elastic Search Flow
+The search follows the exact required workflow:
+User Input → Debounce (300ms) → Filter Local Data → Render Results
+
+text
+- Input is debounced to reduce unnecessary filtering
+- Case-insensitive partial substring matching
+- Instant results rendering after debounce period
+
+### ⏰ Simulated Cron Job
+- Background task check every 20 minutes
+- Identifies pending tasks that are overdue
+- Logs mock email notifications to console
+- Runs immediately on component mount for demonstration
+- Clean interval management to prevent memory leaks
+
+## 🛠 Tech Stack
+
+- **Frontend Framework**: React.js 18.2.0
+- **Build Tool**: Vite 4.3.0
+- **Styling**: Tailwind CSS 3.3.0
+- **State Management**: React Hooks (useState, useEffect)
+- **Session Storage**: Browser sessionStorage API
+- **Development**: Hot Module Replacement (HMR)
+
+## 🚀 Installation & Setup
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-A Task Manager application developed as part of the NELO React.js/Node.js Assessment.
-This project demonstrates React fundamentals, state management with hooks, reusable components, Tailwind UI, session handling, debounced search, and simulated background automation.
-
-Project Overview
-
-This application provides the following functionality:
-
-Login with email and password
-
-Dashboard displaying all tasks
-
-Create, read, update, and delete tasks
-
-Search tasks with debouncing
-
-Filter tasks by status and priority
-
-Session management using sessionStorage
-
-Simulated cron job that runs every 20 minutes
-
-Tailwind-based user interface
-
-The implementation follows all NELO assessment requirements.
-
-Features Implemented
-1. CRUD Operations
-
-Create tasks with:
-
-Title
-
-Description
-
-Priority
-
-Due Date
-
-Required field validation
-
-Task list display with:
-
-Title
-
-Description
-
-Priority badge
-
-Due Date
-
-Status indicator
-
-Edit tasks using a modal
-
-Delete tasks with confirmation
-
-Mark tasks as completed or pending
-
-2. Filtering and Search
-
-Task filters:
-
-All
-
-Completed
-
-Pending
-
-High / Medium / Low Priority
-
-Search functionality:
-
-Debounced search input
-
-Case-insensitive
-
-Partial substring matching (Elastic-style search)
-
-3. Login and Session Handling
-
-Simple login page with email and password
-
-Session stored in sessionStorage
-
-Automatic redirect to dashboard after login
-
-Logout clears session and redirects to login page
-
-4. Debouncing
-
-Implemented using a custom useDebounce hook
-
-Prevents excessive re-renders during search
-
-Ensures smooth user experience
-
-5. Elastic Search Flow
-
-The search process follows the exact required flow:
-
-User types input
-
-Input is debounced
-
-Debounced input filters local tasks
-
-Matching is case-insensitive
-
-Results render instantly
-
-6. Simulated Cron Job
-
-A background check runs every 20 minutes:
-
-Identifies pending tasks
-
-Logs a "mock email notification" message
-
-Runs immediately on component mount (for demo)
-
-Tech Stack
-
-React.js
-
-Vite
-
-React Router v6
-
-Tailwind CSS
-
-JavaScript (ES6+)
-
-sessionStorage
-
-Custom hooks
-
-Installation and Setup
-
-Clone the repository:
-
-git clone https://github.com/vishwanath090/nelo-test.git
-cd nelo-test
-
-
-Install dependencies:
-
-npm install
-
-
-Start development server:
-
-npm run dev
-
-
-Application will be available at:
-
-http://localhost:5173
-
-Project Structure
-src/
- ├── components/
- │      EditTaskModal.jsx
- │      FilterBar.jsx
- │      SearchInput.jsx
- │      TaskCard.jsx
- │      TaskForm.jsx
- ├── hooks/
- │      useDebounce.js
- ├── pages/
- │      Dashboard.jsx
- │      LoginPage.jsx
- ├── utils/
- │      matcher.js
- │      session.js
- ├── styles/
- │      globals.css
- ├── App.jsx
- └── main.jsx
-
-Assessment Checklist
-
-All NELO requirements have been met:
-
-CRUD operations
-
-Task filtering
-
-Debounced search
-
-Elastic matching
-
-Session-based login
-
-Dashboard redirection
-
-Cron simulation
-
-Tailwind-based UI
-
-Reusable components
-
-Clean code and naming
-
-Author
-
-Vishwanath Biradar
-GitHub: https://github.com/vishwanath090
