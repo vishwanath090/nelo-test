@@ -2,7 +2,7 @@
 
 A modern Task Manager application developed as part of the NELO React.js/Node.js Assessment. This project demonstrates React fundamentals, state management with hooks, reusable components, Tailwind CSS UI, session handling, debounced search, and simulated background automation.
 
-## 📋 Project Overview
+## Project Overview
 
 This application provides comprehensive task management functionality:
 
@@ -15,9 +15,9 @@ This application provides comprehensive task management functionality:
 - **Automated Notifications** - Simulated cron job for overdue task alerts
 - **Modern UI** - Tailwind CSS with glass morphism design
 
-## ✨ Features Implemented
+##  Features Implemented
 
-### ✅ CRUD Operations
+###  CRUD Operations
 - **Create Tasks** with:
   - Title (required)
   - Description (required)
@@ -32,7 +32,7 @@ This application provides comprehensive task management functionality:
 - **Delete Tasks** with confirmation dialog
 - **Toggle Completion** status between complete and pending
 
-### 🔍 Filtering & Search
+###  Filtering & Search
 - **Task Filters**:
   - All tasks
   - Completed tasks only
@@ -44,20 +44,20 @@ This application provides comprehensive task management functionality:
   - Partial substring matching across title, description, and priority
   - Real-time results rendering
 
-### 🔐 Login & Session Handling
+###  Login & Session Handling
 - Simple login form with email and password
 - Session persistence using sessionStorage
 - Automatic redirect to dashboard after successful login
 - Logout functionality that clears session
 - Session persists until browser tab closure
 
-### ⚡ Debouncing Implementation
+###  Debouncing Implementation
 - Custom `useDebounce` hook
 - 300ms delay to prevent excessive re-renders
 - Optimized search performance
 - Smooth user typing experience
 
-### 🔎 Elastic Search Flow
+###  Elastic Search Flow
 The search follows the exact required workflow:
 User Input → Debounce (300ms) → Filter Local Data → Render Results
 
@@ -66,14 +66,14 @@ text
 - Case-insensitive partial substring matching
 - Instant results rendering after debounce period
 
-### ⏰ Simulated Cron Job
+###  Simulated Cron Job
 - Background task check every 20 minutes
 - Identifies pending tasks that are overdue
 - Logs mock email notifications to console
 - Runs immediately on component mount for demonstration
 - Clean interval management to prevent memory leaks
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Frontend Framework**: React.js 18.2.0
 - **Build Tool**: Vite 4.3.0
@@ -82,9 +82,23 @@ text
 - **Session Storage**: Browser sessionStorage API
 - **Development**: Hot Module Replacement (HMR)
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - Node.js (version 14 or higher)
 - npm or yarn package manager
+
+### Step-by-Step Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/vishwanath090/nelo-test.git
+   cd nelo-test
+1.Install dependencies
+npm install
+2.Start development server
+npm run dev
+3.Access the application
+http://localhost:5173
+
 
