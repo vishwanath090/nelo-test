@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Vite build output
+dist/
+vite.config.mjs.timestamp*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+.eslintcache
+.stylelintcache
+
+# Windows OneDrive conflict files
+*.one
+
+# Vite cache
+node_modules/.vite/
